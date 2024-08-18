@@ -5,11 +5,11 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-public class Employe {
+public class SecurityControlleur {
 
     @PreAuthorize("hasAnyRole('ADMIN','USER')")
     @GetMapping("/voiture")
-    public String testWeb(){
+    public String testglobal(){
         return "voiture";
     }
     @PreAuthorize("hasRole('ADMIN')")
